@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,500;1,500&family=Outfit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,700;1,700&family=Outfit:wght@500&display=swap');
+
+
+:root {
+    --primarFont: "Montserrat", sans-serif;
+    --secsecondaryfont: "Fraunces", serif;
+
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream_color: hsl(30, 38%, 92%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White_color: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    height: 100%;
+}
+
+body {
+    font-weight: var(--primarFont);
+    font-weight: 400;
+    font-size: 14px;
+    background: var(--Cream_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1,
+h1,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--secsecondaryfont);
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.CARD {
+    width: 600px;
+    display: flex;
+}
+
+.CARD-img {
+    flex-basis: 50%;
+
+}
+
+.CARD-img img.desktop {
+    border-radius: 10px 0 0 10px;
+    display: block;
+
+}
+
+.CARD-img img.mobile {
+    border-radius: 10px 0 0 10px;
+    display: none;
+}
+
+.CARD-body {
+    flex-basis: 50%;
+    background: var(--White_color);
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+}
+
+.CARD-body h2 {
+    color: var(--Very_dark_blue);
+    font-size: 32px;
+}
+
+.CARD-body h6 {
+    color: var(--Dark_grayish_blue);
+    font-family: var(--primarFont);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.CARD-body p {
+    font-size: 14px;
+    color: var(--Dark_grayish_blue);
+    line-height: 1.5em;
+}
+
+.CARD-body p.Price {
+    font-family: var(--secsecondaryfont);
+    color: var(--Dark_cyan);
+    font-size: 30px;
+}
+
+.CARD-body p.Price span {
+    font-family: var(--primarFont);
+    color: var(--Dark_grayish_blue);
+    font-size: 16px;
+    text-decoration: line-through;
+    position: relative;
+    top: -5px;
+    left: 12px;
+}
+
+.CARD-body button {
+    background-color: var(--Dark_cyan);
+    border: 0;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--White_color);
+    font-weight: 700;
+}
+
+.CARD-body button img {
+    display: inline-block;
+    padding-right: 10px;
+    position: relative;
+    top: 3px;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 600px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .CARD {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .CARD-img img.desktop {
+        display: none;
+
+    }
+
+    .CARD-img img.mobile {
+        display: block;
+    }
+    .CARD-body{
+        border-radius: 0 0 10px 10px;
+    }
+}
